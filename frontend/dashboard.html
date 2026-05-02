@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <h1>Dashboard</h1>
+
+  <div class="dashboard-grid">
+
+    <!-- 🔹 Create Project (ADMIN ONLY) -->
+    <div class="card create-project-card">
+      <h3>Create Project</h3>
+
+      <input id="projectName" placeholder="Project Name">
+      <button onclick="createProject()">Create</button>
+    </div>
+
+    <!-- 🔹 Projects + Members -->
+    <div class="card">
+      <h3>Projects</h3>
+
+      <!-- Project dropdown -->
+      <select id="projectSelect"></select>
+
+      <!-- Member dropdown -->
+      <select id="memberSelect" class="member-only"></select>
+
+      <!-- Add member -->
+      <button onclick="addMember()" class="member-only">
+        Add Member
+      </button>
+
+      <!-- Project list -->
+      <ul id="projects"></ul>
+    </div>
+
+    <!-- 🔹 Create Task (ADMIN ONLY) -->
+    <div class="card create-task-card">
+      <h3>Create Task</h3>
+
+      <input id="taskTitle" placeholder="Task Title">
+      <input id="taskDesc" placeholder="Description">
+
+      <!-- 🔥 Due Date (IMPORTANT) -->
+      <input type="date" id="dueDate">
+
+      <!-- Assign user -->
+      <select id="assignUser"></select>
+
+      <button onclick="createTask()">Add Task</button>
+    </div>
+
+    <!-- 🔹 Tasks -->
+    <div class="card">
+      <h3>Tasks</h3>
+      <ul id="tasks"></ul>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
